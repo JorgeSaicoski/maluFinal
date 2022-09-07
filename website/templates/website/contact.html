@@ -1,0 +1,49 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block content %}
+<h2>Contato</h2>
+<form role="form" action="" method="post" class="form">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="form-container">
+        <div class="form-container-info">
+          <div>
+            {{ form.name.errors }}
+
+            {{ form.name }}
+          </div>
+          <div>
+
+              {{ form.email.errors }}
+
+              {{ form.email }}
+          </div>
+          <div>
+              {{ form.title.errors }}
+
+              {{ form.title }}
+          </div>
+
+
+        </div>
+        <div class="form-container-message">
+            {{ form.description.errors }}
+
+            {{ form.description }}
+        </div>
+
+    </div>
+
+    <div class="button-container">
+      <button type="submit">Enviar</button>
+    </div>
+</form>
+<footer class="footer">
+  <div class="footer-container">
+    <a href="mailto: marialuisascharlau@gmail.com"><img style="height: 80px" src="{% static 'images/email.jpg' %}"></a>
+    <a href="https://wa.me/351915190069"><img style="height: 80px" src="{% static 'images/whats.jpg' %}"></a>
+    <a href="https://www.linkedin.com/in/maria-luisa-scharlau-da-silva/"><img style="height: 80px" src="{% static 'images/linkedin.jpg' %}"></a>
+  </div>
+</footer>
+{% endblock %}

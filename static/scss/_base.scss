@@ -1,0 +1,145 @@
+h2{
+  width: 100%;
+  margin: $margin;
+  text-align: center;
+  font-size: $font-title;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  height: $navbarHeight;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  & img{
+    height: $navbarHeight*0.85;
+  }
+  &-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 66%;
+    a {
+      text-decoration: none;
+      color: $textColor;
+      font-size: $font-navbar;
+      transition: 0.5s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.button{
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.form{
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  &-container{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 20%;
+
+    & input{
+      width: 100%;
+      background-color: inherit;
+      border: $border;
+      border-style: none none solid none;
+      height: 100%;
+      font-size: $font-title;
+      padding: $padding*0.25 $padding;
+      &:hover{
+        background-color: white;
+        cursor: text;
+      }
+    }
+    & textarea{
+      width: 100%;
+      border: $border;
+      border-style: solid;
+      border-radius: $rounded-soft;
+      height: 100%;
+      font-size: $font-big;
+      background-color: inherit;
+      &:hover{
+        background-color: white;
+        cursor: text;
+      }
+    }
+    &-info{
+      width: 33%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-message{
+      width: 65%;
+      height: 100%;
+      min-height: 20vh;
+    }
+  }
+}
+.contact-thanks{
+  width: 100%;
+  text-align: center;
+}
+
+.button-container{
+  width: 100%;
+  text-align: center;
+  & button{
+    background-color: $headerColor;
+    border-radius: $rounded-soft;
+    padding: $padding;
+    width: 50%;
+    font-family: $font-ubuntu;
+    font-size: $font-big;
+    &:hover{
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}
+.curriculo{
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+  margin: $margin;
+  a{
+    background-color: $headerColor;
+    padding: 5px;
+    margin: 5px;
+    border-radius: $rounded-soft;
+
+  }
+}
+.footer{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: $padding;
+  &-container{
+    @extend .footer;
+  }
+}

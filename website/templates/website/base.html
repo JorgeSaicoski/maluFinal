@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+	<head>
+    <title>Arquiteta Malu</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" href="{% static 'images/logoHead.png' %}" type="image/icon type"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	</head>
+
+	<body>
+		<button class="button" id="menuIcon">
+	    <img class="button-img" src="{% static 'images/menu.svg' %}">
+    </button>
+		<header class="header" id="navFlex">
+
+			<img src="{% static 'images/logo.png' %}" class="header-img" id="logoFlex">
+
+
+			<nav class="header-navbar" id="itemNavFlex">
+				<a href="{% url 'home' %}">Início</a>
+				<a href="{% url 'home' %}">Sobre</a>
+				<a href="{% url 'home' %}#projects">Portfólio</a>
+				<a href="{% url 'cv' %}">Currículo</a>
+				<a href="{% url 'contact' %}">Contato</a>
+			</nav>
+		</header>
+		{% block slide %}
+		{% endblock %}
+
+		{% block content %}
+		{% endblock %}
+
+	</body>
+
+</html>
