@@ -1,0 +1,7 @@
+
+<h2>Curriculos</h2>
+<div class="curriculo">
+	{% for cv in cvs %}
+		<p>{{cv.name}} <a href="{{cv.document.url}}">Baixe aqui.</a></p>
+	{% endfor %}
+</div>

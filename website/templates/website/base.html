@@ -16,10 +16,9 @@
 	    <img class="button-img" src="{% static 'images/menu.svg' %}">
     </button>
 		<header class="header" id="navFlex">
-
-			<img src="{% static 'images/logo.png' %}" class="header-img" id="logoFlex">
-
-
+			<div class="header-img" id="logoFlex">
+				<img src="{% static 'images/logo.png' %}">
+			</div>
 			<nav class="header-navbar" id="itemNavFlex">
 				<a href="{% url 'home' %}">Início</a>
 				<a href="{% url 'home' %}">Sobre</a>
@@ -33,7 +32,6 @@
 
 		{% block content %}
 		{% endblock %}
-
+		<script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
 	</body>
-
 </html>
