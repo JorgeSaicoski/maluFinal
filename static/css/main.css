@@ -169,7 +169,7 @@ h2 {
   flex-direction: column;
   padding: 1em;
   margin: 1.5em; }
-  .curriculo div {
+  .curriculo p {
     margin: 24px 0;
     display: flex;
     align-content: space-between;
