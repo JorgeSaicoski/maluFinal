@@ -17,6 +17,9 @@ h2 {
   top: 0;
   left: 0;
   z-index: 2; }
+  @media screen and (max-width: 845px) {
+    .header {
+      opacity: 0; } }
   .header img {
     height: 5.1em; }
   .header-navbar {
@@ -36,7 +39,21 @@ h2 {
 .button {
   opacity: 0;
   height: 0;
-  width: 0; }
+  width: 0;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  border-radius: 10%; }
+  @media screen and (max-width: 845px) {
+    .button {
+      opacity: 1;
+      height: 55px;
+      width: 55px;
+      background-color: transparent;
+      border: none; } }
+  .button-img {
+    width: 100%;
+    height: 100%; }
 
 .form {
   width: 100%;
@@ -52,6 +69,9 @@ h2 {
     justify-content: space-between;
     align-items: flex-start;
     min-height: 20%; }
+    @media screen and (max-width: 845px) {
+      .form-container {
+        flex-direction: column; } }
     .form-container input {
       width: 100%;
       background-color: inherit;
@@ -80,10 +100,17 @@ h2 {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+      @media screen and (max-width: 845px) {
+        .form-container-info {
+          width: 100%;
+          margin-bottom: 1.5em; } }
     .form-container-message {
       width: 65%;
       height: 100%;
       min-height: 20vh; }
+      @media screen and (max-width: 845px) {
+        .form-container-message {
+          width: 100%; } }
 
 .contact-thanks {
   width: 100%;
@@ -132,11 +159,18 @@ h2 {
     align-items: center;
     text-decoration: none;
     color: #1F2232; }
+    @media screen and (max-width: 845px) {
+      .hero-container {
+        flex-direction: column; } }
   .hero img {
     width: 35%;
     border-radius: 100%; }
   .hero-text {
     width: 25%; }
+    @media screen and (max-width: 845px) {
+      .hero-text {
+        width: 100%;
+        padding: 1em; } }
     .hero-text-name {
       width: 100%;
       font-size: 24px;
@@ -179,6 +213,18 @@ h2 {
     min-width: 750px;
     height: 500px;
     margin: 1.5em; }
+    @media screen and (max-width: 530px) {
+      .category-list-project {
+        min-width: 300px; } }
+    @media screen and (max-width: 845px) and (min-width: 530px) {
+      .category-list-project {
+        min-width: 550px; } }
+    @media screen and (max-width: 1025px) and (min-width: 845px) {
+      .category-list-project {
+        min-width: 375px; } }
+    @media screen and (max-width: 1281px) and (min-width: 1025px) {
+      .category-list-project {
+        min-width: 450px; } }
     .category-list-project img {
       transition: 1s; }
     .category-list-project:hover .category-list-project-name, .category-list-project:hover .category-list-project-name-container, .category-list-project:hover .category-list-project-name-cover {
@@ -210,6 +256,52 @@ h2 {
           z-index: 1; }
       .category-list-project-name-cover {
         background-color: #87B6A7; }
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .project-detail-title {
+    font-size: 24px;
+    text-align: center;
+    width: 100%; }
+  .project-detail-text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1em;
+    text-align: justify; }
+    @media screen and (max-width: 1025px) {
+      .project-detail-text {
+        flex-direction: column;
+        align-items: center; } }
+    .project-detail-text-title {
+      margin: 1.5em;
+      font-size: 18px; }
+  .project-detail-images {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .project-detail-images-image {
+      width: 562.5px;
+      height: auto;
+      border-radius: 10%;
+      padding: 1em; }
+      @media screen and (max-width: 530px) {
+        .project-detail-images-image {
+          width: 300px; } }
+      @media screen and (max-width: 845px) and (min-width: 530px) {
+        .project-detail-images-image {
+          width: 550px; } }
+      @media screen and (max-width: 1025px) and (min-width: 845px) {
+        .project-detail-images-image {
+          width: 375px; } }
+      @media screen and (max-width: 1281px) and (min-width: 1025px) {
+        .project-detail-images-image {
+          width: 450px; } }
 
 *, *:before, *:after {
   box-sizing: border-box; }
