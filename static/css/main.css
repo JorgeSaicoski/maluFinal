@@ -169,6 +169,14 @@ h2 {
   flex-direction: column;
   padding: 1em;
   margin: 1.5em; }
+  .curriculo div {
+    margin: 24px 0;
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; }
   .curriculo a {
     background-color: #87B6A7;
     padding: 5px;

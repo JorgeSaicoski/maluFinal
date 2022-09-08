@@ -193,6 +193,15 @@ h2{
   flex-direction: column;
   padding: $padding;
   margin: $margin;
+  & div{
+    margin: $font-title 0;
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
   a{
     background-color: $headerColor;
     padding: 5px;
